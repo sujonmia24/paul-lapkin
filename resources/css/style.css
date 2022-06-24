@@ -19,6 +19,7 @@ CSS INDEX
 3. Reusable Components
 4. Hero Section
 5. About Section
+6. Process Section
 
 ========================================================== */
 
@@ -54,6 +55,10 @@ h1 {
     margin: 1rem 0;
 }
 
+h2 {
+    font-size: 4rem;
+}
+
 h4 {
     font-size: 1.8rem;
 }
@@ -81,6 +86,7 @@ a:hover {
 
 p {
     font-size: 1.6rem;
+    color: gray;
 }
 
 /* 3. Reusable Components */
@@ -98,9 +104,14 @@ section {
     background: #000;
     color: #fff;
     font-size: 1.6rem;
-    padding: 1rem 4rem;
+    padding: 1rem 6rem;
     border: 2px solid transparent;
     transition: 0.5s;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4.5rem;
 }
 
 /* =========================================================
@@ -171,7 +182,7 @@ section {
 
 /* =========================================================
 
-4. About Section
+5. About Section
 
 ========================================================== */
 
@@ -199,4 +210,52 @@ section {
     background: transparent;
     border-color: #ff2b4a;
     color: #ff2b4a;
+}
+
+/* =========================================================
+
+6. Process Section
+
+========================================================== */
+
+#process {
+    background: #f6f6f6;
+}
+
+.section-title p {
+    margin: 1.5rem 0;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.process-grid-item {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.process-grid-item ion-icon {
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+}
+
+.process-grid-item:nth-child(1) {
+    background: #10c6fc;
+}
+
+.process-grid-item:nth-child(2) {
+    background: #835aeb;
+}
+
+.process-grid-item:nth-child(3) {
+    background: #002453;
+}
+
+.process-grid-item:nth-child(4) {
+    background: #ff2b4a;
 }
