@@ -1,0 +1,202 @@
+/* ==========================================================
+
+Template Name: Paul Lapkin
+Template URI: https://sujon-mia.dev/projects/paul-lapkin
+Author: Sujon Mia
+Authou URI: https://sujon-mia.me
+Version: 1.0
+Description: An awesome personal portfolio template.
+Support: sujon8912@gmail.com
+
+========================================================== */
+
+/* =========================================================
+
+CSS INDEX
+---------
+1. Google Fonts
+2. Common CSS
+3. Reusable Components
+4. Hero Section
+5. About Section
+
+========================================================== */
+
+/* 1. Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* 2. Common CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    color: #000;
+    background: #fff;
+    font-size: 62.5%;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h1::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+}
+
+h1::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+}
+
+a:link,
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+/* 3. Reusable Components */
+
+.row {
+    max-width: 118rem;
+    margin: auto;
+}
+
+section {
+    padding: 12rem 0;
+}
+
+.btn {
+    background: #000;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem 4rem;
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+
+/* =========================================================
+
+4. Hero Section
+
+========================================================== */
+
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hero.jpg) no-repeat center top / cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    margin-top: 4.5rem;
+    float: left;
+}
+
+.logo img {
+    width: 3.5rem;
+}
+
+.menu-icon {
+    float: right;
+    margin-top: 4.5rem;
+}
+.menu-icon ion-icon {
+    color: #fff;
+    font-size: 3.5rem;
+    border: 0.2rem solid #fff;
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text-box span {
+    display: block;
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+.next-section {
+    text-align: center;
+}
+
+.next-section a {
+    position: absolute;
+    bottom: 4.5rem;
+}
+
+.next-section ion-icon {
+    color: #fff;
+    font-size: 4.5rem;
+}
+
+/* =========================================================
+
+4. About Section
+
+========================================================== */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 4.5rem;
+}
+
+.paul-img {
+    width: 100%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.about-description {
+    margin-top: 3rem;
+    margin-bottom: 6.5rem;
+}
+
+.btn-full {
+    background: #ff2b4a;
+}
+
+.btn-full:hover {
+    background: transparent;
+    border-color: #ff2b4a;
+    color: #ff2b4a;
+}
