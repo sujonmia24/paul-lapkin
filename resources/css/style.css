@@ -20,6 +20,8 @@ CSS INDEX
 4. Hero Section
 5. About Section
 6. Process Section
+7. Experience Section
+8. Work Section
 
 ========================================================== */
 
@@ -59,6 +61,10 @@ h2 {
     font-size: 4rem;
 }
 
+h3 {
+    font-size: 2.6rem;
+}
+
 h4 {
     font-size: 1.8rem;
 }
@@ -87,6 +93,11 @@ a:hover {
 p {
     font-size: 1.6rem;
     color: gray;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #fff;
 }
 
 /* 3. Reusable Components */
@@ -258,4 +269,83 @@ section {
 
 .process-grid-item:nth-child(4) {
     background: #ff2b4a;
+}
+
+/* =========================================================
+
+7. Experience Section
+
+========================================================== */
+
+#exp {
+    background: #000 url(img/experience.jpg) no-repeat center / cover fixed;
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.exp-grid-item {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 4.5rem 3rem;
+}
+
+.job {
+    margin: 4rem 0;
+}
+
+.job span {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    display: inline-block;
+}
+
+/* =========================================================
+
+8. Work Section
+
+========================================================== */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: 26rem;
+}
+
+.work-grid-item {
+    background: #000;
+}
+
+.work-grid-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.work-grid-item:nth-child(2) {
+    background: url(img/lwp2.jpg) no-repeat center / cover;
+}
+
+.work-grid-item:nth-child(3) {
+    background: url(img/lwp3.jpg) no-repeat center / cover;
+}
+
+.work-grid-item:nth-child(4) {
+    background: url(img/lwp4.jpg) no-repeat center / cover;
+}
+
+.work-grid-item:nth-child(5) {
+    background: url(img/lw5.jpg) no-repeat center / cover;
+    grid-column: 1/3;
+}
+
+.work-grid-item:nth-child(6) {
+    background: url(img/lw6.jpg) no-repeat center / cover;
+}
+
+.work-grid-item:nth-child(7) {
+    background: url(img/lw7.jpg) no-repeat center / cover;
 }
