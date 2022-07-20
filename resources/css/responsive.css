@@ -1,0 +1,74 @@
+@media screen and (max-width: 1200px) {
+    .row {
+        max-width: 100%;
+        margin: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-container,
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .work-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .work-grid-item:nth-child(5) {
+        grid-column: 1 / 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .paul-img {
+        width: 65%;
+    }
+    .grid-about-item {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        font-size: 57.5%;
+    }
+    .process-grid,
+    .exp-grid,
+    .work-grid,
+    .tml-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hero {
+        height: 500px;
+    }
+    h1 {
+        font-size: 4.5rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    .hero-text-box span {
+        font-size: 1.6rem;
+    }
+    #testimonial {
+        background-image: none;
+        background-color: #d0d0d0;
+        text-align: center;
+    }
+    .tml-grid-item p {
+        width: 90%;
+        margin: 4.5rem auto;
+    }
+    .process-grid .wow {
+        animation: none;
+    }
+}

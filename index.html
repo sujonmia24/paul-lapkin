@@ -10,7 +10,10 @@
     <title>Paul Lapkin</title>
     <link rel="shortcut icon" href="resources/img/favicon.png" type="image/x-icon">
     <!-- CSS FILES -->
+    <link rel="stylesheet" href="vendors/css/uikit.min.css">
     <link rel="stylesheet" href="vendors/css/normalize.css">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/css/animate.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/responsive.css">
 </head>
@@ -19,27 +22,45 @@
     <!-- SRART HEADER SECTION -->
 
     <header id="hero">
-        <nav class="clearfix">
+        <nav class="clearfix" style="z-index: 9999;" data-uk-sticky="top: 200;">
             <div class="row">
                 <div class="logo">
                     <img src="resources/img/logo.png" alt="Paul Lapkin">
                 </div>
-                <div class="menu-icon">
-                    <a href="#">
+                <div class="menu-icon" onclick="openMenu()">
+                    <a>
                         <ion-icon name="menu-outline"></ion-icon>
                     </a>
                 </div>
             </div>
         </nav>
+        <div class="menu-container" id="navbar">
+            <div class="close-btn" onclick="closeMenu()">
+                <a>
+                    <i class="lni lni-close"></i>
+                </a>
+            </div>
+            <div class="menu-item">
+                <ul>
+                    <li><a href="#hero" onclick="closeMenu()">HOME</a></li>
+                    <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+                    <li><a href="#process" onclick="closeMenu()">PROCESS</a></li>
+                    <li><a href="#exp" onclick="closeMenu()">EXPERIENCE</a></li>
+                    <li><a href="#work" onclick="closeMenu()">PORTFOLIO</a></li>
+                    <li><a href="#testimonial" onclick="closeMenu()">TESTIMONIAL</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="hero-text-box">
-            <div class="row">
+            <div class="row" data-uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
                 <h1>Paul Lapkin</h1>
                 <span>#User Experience  #Music  #Creative Direction</span>
             </div>
         </div>
         <div class="next-section">
             <div class="row">
-                <a href="#">
+                <a href="#about">
                     <ion-icon name="download-outline"></ion-icon>
                 </a>
             </div>
@@ -55,7 +76,7 @@
         <div class="row">
             <div class="about-container">
                 <div class="grid-about-item">
-                    <img src="resources/img/paul.jpg" alt="Paul" class="paul-img">
+                    <img src="resources/img/paul.jpg" alt="Paul" class="paul-img wow swing">
                 </div>
                 <div class="grid-about-item">
                     <h4>Hi, i'm Paul Lapkin, Experience crafter from Canada.</h4>
@@ -81,19 +102,19 @@
                 <p>Hi, i'am Paul Lapkin, Experience crafter from Canada.</p>
             </div>
             <div class="process-grid">
-                <div class="process-grid-item">
+                <div class="process-grid-item wow fadeInUp" data-wow-duration="2s">
                     <ion-icon name="desktop-outline"></ion-icon>
                     <h4>DESIGN</h4>
                 </div>
-                <div class="process-grid-item">
+                <div class="process-grid-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
                     <ion-icon name="airplane-outline"></ion-icon>
                     <h4>DEVELOPMENT</h4>
                 </div>
-                <div class="process-grid-item">
+                <div class="process-grid-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
                     <ion-icon name="american-football-outline"></ion-icon>
                     <h4>TESTING</h4>
                 </div>
-                <div class="process-grid-item">
+                <div class="process-grid-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="3s">
                     <ion-icon name="airplane-outline"></ion-icon>
                     <h4>LAUNCH</h4>
                 </div>
@@ -151,16 +172,49 @@
                 <h2>My Latest Work</h2>
                 <p>Hi, i'am Paul Lapkin, Experience crafter from Canada.</p>
             </div>
-            <div class="work-grid">
-                <div class="work-grid-item">
-                    <img src="resources/img/lwp1.jpg" alt="portfolio">
+            <div class="work-filter">
+                <ul>
+                    <li data-filter="all">All</li>
+                    <li data-filter=".wd">Web Design</li>
+                    <li data-filter=".webd">Web Development</li>
+                </ul>
+            </div>
+            <div class="work-grid" data-uk-lightbox>
+                <div class="work-grid-item mix wd">
+                    <a href="resources/img/lwp1.jpg">
+                        <img src="resources/img/lwp1.jpg" alt="portfolio">
+                    </a>
                 </div>
-                <div class="work-grid-item"></div>
-                <div class="work-grid-item"></div>
-                <div class="work-grid-item"></div>
-                <div class="work-grid-item"></div>
-                <div class="work-grid-item"></div>
-                <div class="work-grid-item"></div>
+                <div class="work-grid-item mix wd">
+                    <a href="resources/img/lwp2.jpg">
+                        <img src="resources/img/lwp2.jpg" alt="portfolio">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webd">
+                    <a href="resources/img/lwp3.jpg">
+                        <img src="resources/img/lwp3.jpg" alt="portfolio">
+                    </a>
+                </div>
+                <div class="work-grid-item mix wd">
+                    <a href="resources/img/lwp4.jpg">
+                        <img src="resources/img/lwp4.jpg" alt="portfolio">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webd">
+                    <a href="resources/img/lw5.jpg">
+                        <img src="resources/img/lw5.jpg" alt="portfolio">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webd">
+                    <a href="resources/img/lw6.jpg">
+                        <img src="resources/img/lw6.jpg" alt="portfolio">
+                    </a>
+                </div>
+                <div class="work-grid-item mix wd">
+                    <a href="resources/img/lw7.jpg">
+                        <img src="resources/img/lw7.jpg" alt="portfolio">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -244,6 +298,9 @@
             <div class="copyright">
                 <p>Copyright: Sujon | All Rights Reserved.</p>
             </div>
+            <div class="top">
+                <a href="#" data-uk-totop data-uk-scroll></a>
+            </div>
         </div>
     </footer>
 
@@ -251,8 +308,15 @@
 
 
     <!-- JS FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vendors/js/uikit.min.js"></script>
+    <script src="vendors/js/uikit-icons.min.js"></script>
     <script src="vendors/js/modernizr-3.11.2.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
+    <script src="vendors/js/particles.min.js"></script>
+    <script src="vendors/js/app.js"></script>
+    <script src="vendors/js/mixitup.min.js"></script>
+    <script src="vendors/js/wow.min.js"></script>
+    <script src="resources/js/script.js"></script>
 </body>
 </html>
